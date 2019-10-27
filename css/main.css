@@ -70,12 +70,26 @@ img.logo {
   font-family: 'ABeeZee', sans-serif;
 }
 
+.logo-label-home{
+  font-size: 69px;
+  font-family: 'ABeeZee', sans-serif;
+  width: 50%;
+  margin-bottom: 5%;
+}
+
 .app-label{
   font-size: 35px;
   display: block;
   text-align: right;
   margin-top: -8%;
 }
+
+.app-label-home{
+    font-size: 18.57px;
+    display: block;
+    text-align: right;
+    margin-top: -8%;
+  }
 
 .em-breve-label{
     position: fixed;
