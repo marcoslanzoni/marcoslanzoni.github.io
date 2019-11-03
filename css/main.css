@@ -1,102 +1,99 @@
 img.logo {
-    width: 50%;
-    filter: invert(1)
+  width: 50%;
+  filter: invert(1)
 }
 
-.city-select {
-    display: block;
+#city-select div, #location-select div {
+width: 100%;
 }
 
-.location-select {
-    display: block;
-}
 
 .rent-select {
-    display: flex;
+  display: flex;
 }
 
 .life-slider {
-    width: 60%;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 12%;
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12%;
 }
 
 .center {
-    margin: auto;
-    width: 50%;
-  }
-
-  .text-center {
-      text-align: center;
-  }
-
-  .no-margin-bottom {
-      margin-bottom: 0px;
-  }
-
-  body {
-    background-color: #5f1cb9;
-    color: whitesmoke;
-  }
-
-  .background-forced-whitesmoke{
-      background-color: whitesmoke !important;
-  }
-
-  .background-whitesmoke{
-    background-color: whitesmoke;
+  margin: auto;
+  width: 50%;
 }
 
-  .background-aqua {
-    background-color: #4a91a8 !important;
-  }
+.text-center {
+    text-align: center;
+}
 
-  .forced-whitesmoke{
-      color: whitesmoke !important;
-  }
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
 
-  .search-button-div{
-      display: flex;
-      justify-content: center;
-  }
+body {
+  background-color: #5f1cb9;
+  color: whitesmoke;
+}
+
+.background-forced-whitesmoke{
+    background-color: whitesmoke !important;
+}
+
+.background-whitesmoke{
+  background-color: whitesmoke;
+}
+
+.background-aqua {
+  background-color: #4a91a8 !important;
+}
+
+.forced-whitesmoke{
+    color: whitesmoke !important;
+}
+
+.search-button-div{
+    display: flex;
+    justify-content: center;
+}
 
 .logo-label{
-    position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 130px;
-  font-family: 'ABeeZee', sans-serif;
+  position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 130px;
+font-family: 'ABeeZee', sans-serif;
 }
 
 .logo-label-home{
-  font-size: 69px;
-  font-family: 'ABeeZee', sans-serif;
-  width: 50%;
-  margin-bottom: 5%;
+font-size: 69px;
+font-family: 'ABeeZee', sans-serif;
+width: 50%;
+margin-bottom: 5%;
 }
 
 .app-label{
-  font-size: 35px;
+font-size: 35px;
+display: block;
+text-align: right;
+margin-top: -8%;
+}
+
+.app-label-home{
+  font-size: 18.57px;
   display: block;
   text-align: right;
   margin-top: -8%;
 }
 
-.app-label-home{
-    font-size: 18.57px;
-    display: block;
-    text-align: right;
-    margin-top: -8%;
-  }
-
 .em-breve-label{
-    position: fixed;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    font-family: 'Alegreya Sans', sans-serif;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: 'Alegreya Sans', sans-serif;
 
 }

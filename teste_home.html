@@ -20,43 +20,53 @@
   <div class="logo-label-home">
     <label class="mudei-label">mudei</label>
     <label class="app-label-home">.app</label>
-</div>
+  </div>
 
   <!-- City Select -->
-  <div id="city-select" class="mdc-select city-select">
-    <i class="mdc-select__dropdown-icon"></i>
-    <select class="mdc-select__native-control">
-      <option value="" disabled selected></option>
-      <option value="belo-horizonte">
-        Belo Horizonte
-      </option>
-    </select>
-    <label class="mdc-floating-label">Escolha a cidade</label>
-    <div class="mdc-line-ripple"></div>
+  <div id="city-select" class="mdc-select">
+    <div class="mdc-select__anchor">
+      <i class="mdc-select__dropdown-icon"></i>
+      <div class="mdc-select__selected-text"></div>
+      <span class="mdc-floating-label">Escolha a cidade</span>
+      <div class="mdc-line-ripple"></div>
+    </div>
+
+    <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+      <ul class="mdc-list">
+        <li class="mdc-list-item mdc-list-item--selected" data-value="belo-horizonte" aria-selected="true">
+          Belo Horizonte
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- Location Select -->
-  <div id="location-select" class="mdc-select location-select">
-    <i class="mdc-select__dropdown-icon"></i>
-    <select class="mdc-select__native-control">
-      <option value="" disabled selected></option>
-      <option value="rent">
-        Alugar
-      </option>
-      <option value="sold">
-        Comprar
-      </option>
-    </select>
-    <label class="mdc-floating-label">Deseja um imóvel para</label>
-    <div class="mdc-line-ripple"></div>
+  <div id="location-select" class="mdc-select">
+    <div class="mdc-select__anchor">
+      <i class="mdc-select__dropdown-icon"></i>
+      <div class="mdc-select__selected-text"></div>
+      <span class="mdc-floating-label">Deseja um imóvel para</span>
+      <div class="mdc-line-ripple"></div>
+    </div>
+
+    <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+      <ul class="mdc-list">
+        <li class="mdc-list-item" data-value="rent">
+          Alugar
+        </li>
+        <li class="mdc-list-item" data-value="rent">
+          Comprar
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- Price Range -->
   <h6 class="mdc-typography--headline6 text-center no-margin-bottom">Quanto você pretende gastar?</h6>
   <div>
     <button class="mdc-icon-button material-icons">attach_money</button>
-    <div id="price-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0"
-      role="slider" aria-valuemin="400" aria-valuemax="100000" aria-valuenow="3000" aria-label="Select Value">
+    <div id="price-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
+      aria-valuemin="400" aria-valuemax="100000" aria-valuenow="3000" aria-label="Select Value">
       <div class="mdc-slider__track-container background-forced-whitesmoke">
         <div class="mdc-slider__track"></div>
         <div class="mdc-slider__track-marker-container"></div>
@@ -79,9 +89,8 @@
   <!-- Transport Range -->
   <div>
     <button class="mdc-icon-button material-icons">directions_bus</button>
-    <div id="transport-slider" class="mdc-slider mdc-slider--discrete life-slider"
-      tabindex="0" role="slider" aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-valuenow="0"
-      aria-label="Select Value">
+    <div id="transport-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
+      aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-valuenow="0" aria-label="Select Value">
       <div class="mdc-slider__track-container background-forced-whitesmoke">
         <div class="mdc-slider__track"></div>
         <div class="mdc-slider__track-marker-container"></div>
@@ -104,9 +113,8 @@
   <!-- Food Range -->
   <div>
     <button class="mdc-icon-button material-icons">fastfood</button>
-    <div id="food-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0"
-      role="slider" aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-valuenow="0"
-      aria-label="Select Value">
+    <div id="food-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
+      aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-valuenow="0" aria-label="Select Value">
       <div class="mdc-slider__track-container background-forced-whitesmoke">
         <div class="mdc-slider__track"></div>
         <div class="mdc-slider__track-marker-container"></div>
@@ -129,9 +137,8 @@
   <!-- Shopping and Services Range -->
   <div>
     <button class="mdc-icon-button material-icons">local_mall</button>
-    <div id="shopping-and-services-slider"
-      class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
-      aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-label="Select Value">
+    <div id="shopping-and-services-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0"
+      role="slider" aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-label="Select Value">
       <div class="mdc-slider__track-container background-forced-whitesmoke">
         <div class="mdc-slider__track"></div>
         <div class="mdc-slider__track-marker-container"></div>
