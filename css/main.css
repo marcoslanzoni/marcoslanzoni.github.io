@@ -4,6 +4,19 @@ body{
   margin: auto;
 }
 
+#logo-link{
+  text-decoration: none;
+  color: white;
+}
+
+#logo-link *{
+  cursor: pointer;
+}
+
+header{
+  height: 65px;
+}
+
 img.logo {
     width: 50%;
     filter: invert(1)
@@ -70,10 +83,9 @@ img.logo {
 }
 
 .logo-label-home{
-  font-size: 69px;
+  font-size: 45px;
   font-family: 'ABeeZee', sans-serif;
-  width: 50%;
-  margin-bottom: 5%;
+  width: 33%;
   display: block;
   float: left;
 }
@@ -96,7 +108,7 @@ img.logo {
 }
 
 .app-label-home{
-    font-size: 18.57px;
+    font-size: 12.11px;
     display: block;
     text-align: right;
     margin-top: -8%;

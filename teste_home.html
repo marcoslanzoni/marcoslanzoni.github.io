@@ -78,21 +78,25 @@
   </head>
 
   <body>
-    <!-- Logo -->
-    <div>
-      <div class="logo-label-home">
-        <label class="mudei-label">mudei</label>
-        <label class="app-label-home">.app</label>
+    <header>
+      <div>
+        <!-- Logo -->
+        <a id="logo-link" href="#">
+          <div class="logo-label-home">
+            <label class="mudei-label">mudei</label>
+            <label class="app-label-home">.app</label>
+          </div>
+        </a>
+        <!-- Help -->
+        <button
+          alt="Como funciona?"
+          id="about-icon"
+          class="mdc-icon-button material-icons"
+        >
+          help_outline
+        </button>
       </div>
-      <button
-        alt="Como funciona?"
-        id="about-icon"
-        class="mdc-icon-button material-icons"
-      >
-        help_outline
-      </button>
-    </div>
-
+    </header>
     <!-- City Select -->
     <div id="city-select" class="mdc-select">
       <div class="mdc-select__anchor">
@@ -388,11 +392,11 @@
         <span class="mdc-button__label">Buscar</span>
       </button>
     </div>
-  </body>
 
-  <footer>
-    <!-- <label class="text-center">Contato: lanzoni0@hotmail.com</label> -->
-  </footer>
+    <footer>
+      <!-- <label class="text-center">Contato: lanzoni0@hotmail.com</label> -->
+    </footer>
+  </body>
 
   <script>
     loadElements();
