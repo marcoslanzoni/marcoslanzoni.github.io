@@ -1,217 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      mudei.app - Escolha seu imóvel, com tudo que realmente interessa
+    </title>
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="js/index.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>mudei.app</title>
-  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Logo -->
-  <div class="logo-label-home">
-    <label class="mudei-label">mudei</label>
-    <label class="app-label-home">.app</label>
-  </div>
-
-  <!-- City Select -->
-  <div id="city-select" class="mdc-select">
-    <div class="mdc-select__anchor">
-      <i class="mdc-select__dropdown-icon"></i>
-      <div class="mdc-select__selected-text"></div>
-      <span class="mdc-floating-label">Escolha a cidade</span>
-      <div class="mdc-line-ripple"></div>
-    </div>
-
-    <div class="mdc-select__menu mdc-menu mdc-menu-surface">
-      <ul class="mdc-list">
-        <li class="mdc-list-item mdc-list-item--selected" data-value="belo-horizonte" aria-selected="true">
-          Belo Horizonte
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Location Select -->
-  <div id="location-select" class="mdc-select">
-    <div class="mdc-select__anchor">
-      <i class="mdc-select__dropdown-icon"></i>
-      <div class="mdc-select__selected-text"></div>
-      <span class="mdc-floating-label">Deseja um imóvel para</span>
-      <div class="mdc-line-ripple"></div>
-    </div>
-
-    <div class="mdc-select__menu mdc-menu mdc-menu-surface">
-      <ul class="mdc-list">
-        <li class="mdc-list-item" data-value="rent">
-          Alugar
-        </li>
-        <li class="mdc-list-item" data-value="rent">
-          Comprar
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Price Range -->
-  <h6 class="mdc-typography--headline6 text-center no-margin-bottom">Quanto você pretende gastar?</h6>
-  <div>
-    <button class="mdc-icon-button material-icons">attach_money</button>
-    <div id="price-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
-      aria-valuemin="400" aria-valuemax="100000" aria-valuenow="3000" aria-label="Select Value">
-      <div class="mdc-slider__track-container background-forced-whitesmoke">
-        <div class="mdc-slider__track"></div>
-        <div class="mdc-slider__track-marker-container"></div>
-      </div>
-      <div class="mdc-slider__thumb-container">
-        <div class="mdc-slider__pin">
-          <span class="mdc-slider__pin-value-marker"></span>
-        </div>
-        <svg class="mdc-slider__thumb" width="21" height="21">
-          <circle cx="10.5" cy="10.5" r="7.875"></circle>
-        </svg>
-        <div class="mdc-slider__focus-ring"></div>
-      </div>
-    </div>
-    <div><label id="price-label">Até R$ 3000</label></div>
-  </div>
-
-
-  <h6 class="mdc-typography--headline6 text-center no-margin-bottom">O que é importante ser próximo pra você?</h6>
-  <!-- Transport Range -->
-  <div>
-    <button class="mdc-icon-button material-icons">directions_bus</button>
-    <div id="transport-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
-      aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-valuenow="0" aria-label="Select Value">
-      <div class="mdc-slider__track-container background-forced-whitesmoke">
-        <div class="mdc-slider__track"></div>
-        <div class="mdc-slider__track-marker-container"></div>
-      </div>
-      <div class="mdc-slider__thumb-container">
-        <div class="mdc-slider__pin">
-          <span class="mdc-slider__pin-value-marker"></span>
-        </div>
-        <svg class="mdc-slider__thumb" width="21" height="21">
-          <circle cx="10.5" cy="10.5" r="7.875"></circle>
-        </svg>
-        <div class="mdc-slider__focus-ring"></div>
-      </div>
-    </div>
+  <body>
+    <!-- Logo -->
     <div>
-      <label id="transport-label">Até 100 m</label>
-    </div>
-  </div>
-
-  <!-- Food Range -->
-  <div>
-    <button class="mdc-icon-button material-icons">fastfood</button>
-    <div id="food-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0" role="slider"
-      aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-valuenow="0" aria-label="Select Value">
-      <div class="mdc-slider__track-container background-forced-whitesmoke">
-        <div class="mdc-slider__track"></div>
-        <div class="mdc-slider__track-marker-container"></div>
+      <div class="logo-label-home">
+        <label class="mudei-label">mudei</label>
+        <label class="app-label-home">.app</label>
       </div>
-      <div class="mdc-slider__thumb-container">
-        <div class="mdc-slider__pin">
-          <span class="mdc-slider__pin-value-marker"></span>
+      <button
+        alt="Como funciona?"
+        id="about-icon"
+        class="mdc-icon-button material-icons"
+      >
+        help_outline
+      </button>
+    </div>
+
+    <!-- City Select -->
+    <div id="city-select" class="mdc-select">
+      <div class="mdc-select__anchor">
+        <i class="mdc-select__dropdown-icon"></i>
+        <div class="mdc-select__selected-text"></div>
+        <span class="mdc-floating-label">Escolha a cidade</span>
+        <div class="mdc-line-ripple"></div>
+      </div>
+
+      <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+        <ul class="mdc-list">
+          <li
+            class="mdc-list-item mdc-list-item--selected"
+            data-value="Belo Horizonte"
+            aria-selected="true"
+          >
+            Belo Horizonte
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Location Select -->
+    <div id="location-select" class="mdc-select">
+      <div class="mdc-select__anchor">
+        <i class="mdc-select__dropdown-icon"></i>
+        <div class="mdc-select__selected-text"></div>
+        <span class="mdc-floating-label">Deseja um imóvel para</span>
+        <div class="mdc-line-ripple"></div>
+      </div>
+
+      <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+        <ul class="mdc-list">
+          <li class="mdc-list-item mdc-list-item--selected" data-value="Rent">
+            Alugar
+          </li>
+          <li class="mdc-list-item" data-value="Sold">
+            Comprar
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Price Range -->
+    <h6 class="mdc-typography--headline6 text-center no-margin-bottom">
+      Quanto você pretende gastar?
+    </h6>
+    <div id="rent-price-range">
+      <button class="mdc-icon-button material-icons">attach_money</button>
+      <div
+        id="rent-price-slider"
+        class="mdc-slider mdc-slider--discrete life-slider"
+        tabindex="0"
+        role="slider"
+        aria-valuemin="400"
+        aria-valuemax="30000"
+        aria-valuenow="2000"
+        aria-label="Select Value"
+      >
+        <div class="mdc-slider__track-container background-forced-whitesmoke">
+          <div class="mdc-slider__track"></div>
+          <div class="mdc-slider__track-marker-container"></div>
         </div>
-        <svg class="mdc-slider__thumb" width="21" height="21">
-          <circle cx="10.5" cy="10.5" r="7.875"></circle>
-        </svg>
-        <div class="mdc-slider__focus-ring"></div>
-      </div>
-    </div>
-    <div>
-      <label id="food-label">Até 100 m</label>
-    </div>
-  </div>
-
-  <!-- Shopping and Services Range -->
-  <div>
-    <button class="mdc-icon-button material-icons">local_mall</button>
-    <div id="shopping-and-services-slider" class="mdc-slider mdc-slider--discrete life-slider" tabindex="0"
-      role="slider" aria-valuemin="50" aria-valuemax="5000" aria-valuenow="100" aria-label="Select Value">
-      <div class="mdc-slider__track-container background-forced-whitesmoke">
-        <div class="mdc-slider__track"></div>
-        <div class="mdc-slider__track-marker-container"></div>
-      </div>
-      <div class="mdc-slider__thumb-container">
-        <div class="mdc-slider__pin">
-          <span class="mdc-slider__pin-value-marker"></span>
+        <div class="mdc-slider__thumb-container">
+          <div class="mdc-slider__pin">
+            <span class="mdc-slider__pin-value-marker"></span>
+          </div>
+          <svg class="mdc-slider__thumb" width="21" height="21">
+            <circle cx="10.5" cy="10.5" r="7.875"></circle>
+          </svg>
+          <div class="mdc-slider__focus-ring"></div>
         </div>
-        <svg class="mdc-slider__thumb" width="21" height="21">
-          <circle cx="10.5" cy="10.5" r="7.875"></circle>
-        </svg>
-        <div class="mdc-slider__focus-ring"></div>
+      </div>
+      <div><label id="rent-price-label">Até R$ 2000</label></div>
+    </div>
+
+    <div id="sold-price-range">
+      <button class="mdc-icon-button material-icons">attach_money</button>
+      <div
+        id="sold-price-slider"
+        class="mdc-slider mdc-slider--discrete life-slider"
+        tabindex="0"
+        role="slider"
+        aria-valuemin="50000"
+        aria-valuemax="2000000"
+        aria-valuenow="200000"
+        aria-label="Select Value"
+      >
+        <div class="mdc-slider__track-container background-forced-whitesmoke">
+          <div class="mdc-slider__track"></div>
+          <div class="mdc-slider__track-marker-container"></div>
+        </div>
+        <div class="mdc-slider__thumb-container">
+          <div class="mdc-slider__pin">
+            <span class="mdc-slider__pin-value-marker"></span>
+          </div>
+          <svg class="mdc-slider__thumb" width="21" height="21">
+            <circle cx="10.5" cy="10.5" r="7.875"></circle>
+          </svg>
+          <div class="mdc-slider__focus-ring"></div>
+        </div>
+      </div>
+      <div><label id="sold-price-label">Até R$ 200000</label></div>
+    </div>
+
+    <h6 class="mdc-typography--headline6 text-center no-margin-bottom">
+      O que é importante ser próximo pra você?
+    </h6>
+    <!-- Transport Range -->
+    <div>
+      <button class="mdc-icon-button material-icons">directions_bus</button>
+      <div
+        id="transport-slider"
+        class="mdc-slider mdc-slider--discrete life-slider"
+        tabindex="0"
+        role="slider"
+        aria-valuemin="50"
+        aria-valuemax="5000"
+        aria-valuenow="100"
+        aria-valuenow="0"
+        aria-label="Select Value"
+      >
+        <div class="mdc-slider__track-container background-forced-whitesmoke">
+          <div class="mdc-slider__track"></div>
+          <div class="mdc-slider__track-marker-container"></div>
+        </div>
+        <div class="mdc-slider__thumb-container">
+          <div class="mdc-slider__pin">
+            <span class="mdc-slider__pin-value-marker"></span>
+          </div>
+          <svg class="mdc-slider__thumb" width="21" height="21">
+            <circle cx="10.5" cy="10.5" r="7.875"></circle>
+          </svg>
+          <div class="mdc-slider__focus-ring"></div>
+        </div>
+      </div>
+      <div>
+        <label id="transport-label">Até 100 m</label>
       </div>
     </div>
+
+    <!-- Food Range -->
     <div>
-      <label id="shopping-and-services-label">Até 100 m</label>
+      <button class="mdc-icon-button material-icons">fastfood</button>
+      <div
+        id="food-slider"
+        class="mdc-slider mdc-slider--discrete life-slider"
+        tabindex="0"
+        role="slider"
+        aria-valuemin="50"
+        aria-valuemax="5000"
+        aria-valuenow="100"
+        aria-valuenow="0"
+        aria-label="Select Value"
+      >
+        <div class="mdc-slider__track-container background-forced-whitesmoke">
+          <div class="mdc-slider__track"></div>
+          <div class="mdc-slider__track-marker-container"></div>
+        </div>
+        <div class="mdc-slider__thumb-container">
+          <div class="mdc-slider__pin">
+            <span class="mdc-slider__pin-value-marker"></span>
+          </div>
+          <svg class="mdc-slider__thumb" width="21" height="21">
+            <circle cx="10.5" cy="10.5" r="7.875"></circle>
+          </svg>
+          <div class="mdc-slider__focus-ring"></div>
+        </div>
+      </div>
+      <div>
+        <label id="food-label">Até 100 m</label>
+      </div>
     </div>
-  </div>
 
-</body>
+    <!-- Shopping and Services Range -->
+    <div>
+      <button class="mdc-icon-button material-icons">local_mall</button>
+      <div
+        id="shopping-and-services-slider"
+        class="mdc-slider mdc-slider--discrete life-slider"
+        tabindex="0"
+        role="slider"
+        aria-valuemin="50"
+        aria-valuemax="5000"
+        aria-valuenow="100"
+        aria-label="Select Value"
+      >
+        <div class="mdc-slider__track-container background-forced-whitesmoke">
+          <div class="mdc-slider__track"></div>
+          <div class="mdc-slider__track-marker-container"></div>
+        </div>
+        <div class="mdc-slider__thumb-container">
+          <div class="mdc-slider__pin">
+            <span class="mdc-slider__pin-value-marker"></span>
+          </div>
+          <svg class="mdc-slider__thumb" width="21" height="21">
+            <circle cx="10.5" cy="10.5" r="7.875"></circle>
+          </svg>
+          <div class="mdc-slider__focus-ring"></div>
+        </div>
+      </div>
+      <div>
+        <label id="shopping-and-services-label">Até 100 m</label>
+      </div>
+    </div>
 
-<footer>
-  <div class="search-button-div">
-    <button class="mdc-button mdc-button--raised">
-      <span class="mdc-button__label">Buscar</span>
-    </button>
-  </div>
-</footer>
+    <div
+      id="filter-chips"
+      class="mdc-chip-set mdc-chip-set--filter text-center"
+      role="grid"
+    >
+      <div id="bedroom-filters">
+        <!-- <label>Quartos</label> -->
+        <div class="mdc-chip" role="row">
+          <div class="mdc-chip__ripple"></div>
+          <span class="mdc-chip__checkmark">
+            <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+              <path
+                class="mdc-chip__checkmark-path"
+                fill="none"
+                stroke="black"
+                d="M1.73,12.91 8.1,19.28 22.79,4.59"
+              />
+            </svg>
+          </span>
+          <span role="gridcell">
+            <span
+              role="checkbox"
+              tabindex="0"
+              aria-checked="false"
+              class="mdc-chip__text"
+              value="1"
+              data-type="bedroom"
+              >1 quarto</span
+            >
+          </span>
+        </div>
 
-<script>
-  var categories = [
-    ["Alimentação", "food"],
-    ["Compras e Serviços", "shopping_and_services"],
-    ["Transporte", "transport"]
-  ]
+        <div class="mdc-chip" role="row">
+          <div class="mdc-chip__ripple"></div>
+          <span class="mdc-chip__checkmark">
+            <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+              <path
+                class="mdc-chip__checkmark-path"
+                fill="none"
+                stroke="black"
+                d="M1.73,12.91 8.1,19.28 22.79,4.59"
+              />
+            </svg>
+          </span>
+          <span role="gridcell">
+            <span
+              role="checkbox"
+              tabindex="0"
+              aria-checked="false"
+              class="mdc-chip__text"
+              value="2"
+              data-type="bedroom"
+              >2 quartos</span
+            >
+          </span>
+        </div>
 
-  const { MDCSlider } = mdc.slider;
-  const { MDCSelect } = mdc.select;
-  const { MDCRipple } = mdc.ripple;
+        <div class="mdc-chip" role="row">
+          <div class="mdc-chip__ripple"></div>
+          <span class="mdc-chip__checkmark">
+            <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+              <path
+                class="mdc-chip__checkmark-path"
+                fill="none"
+                stroke="black"
+                d="M1.73,12.91 8.1,19.28 22.79,4.59"
+              />
+            </svg>
+          </span>
+          <span role="gridcell">
+            <span
+              role="checkbox"
+              tabindex="0"
+              aria-checked="false"
+              class="mdc-chip__text"
+              value="3"
+              data-type="bedroom"
+              >3+ quartos</span
+            >
+          </span>
+        </div>
+      </div>
+    </div>
 
-  try {
-    const priceSlider = new MDCSlider(document.querySelector('#price-slider'));
-    priceSlider.listen('MDCSlider:change', () => document.querySelector('#price-label').textContent = "Até R$ " + priceSlider.value)
-  } catch (error) { }
+    <div class="search-button-div">
+      <button class="mdc-button mdc-button--raised" onclick="realStateSearch()">
+        <span class="mdc-button__label">Buscar</span>
+      </button>
+    </div>
+  </body>
 
-  try {
-    const transportSlider = new MDCSlider(document.querySelector('#transport-slider'));
-    transportSlider.listen('MDCSlider:change', () => transportSlider.value < 1000 ? document.querySelector('#transport-label').textContent = "Até " + transportSlider.value + " m" : document.querySelector('#transport-label').textContent = "Até " + Math.round((transportSlider.value / 1000) * 10) / 10 + " km")
-  } catch (error) { }
+  <footer>
+    <!-- <label class="text-center">Contato: lanzoni0@hotmail.com</label> -->
+  </footer>
 
-  try {
-    const foodSlider = new MDCSlider(document.querySelector('#food-slider'));
-    foodSlider.listen('MDCSlider:change', () => foodSlider.value < 1000 ? document.querySelector('#food-label').textContent = "Até " + foodSlider.value + " m" : document.querySelector('#food-label').textContent = "Até " + Math.round((foodSlider.value / 1000) * 10) / 10 + " km")
-  } catch (error) { }
-
-  try {
-    const shoppingAndServicesSlider = new MDCSlider(document.querySelector('#shopping-and-services-slider'));
-    shoppingAndServicesSlider.listen('MDCSlider:change', () => shoppingAndServicesSlider.value < 1000 ? document.querySelector('#shopping-and-services-label').textContent = "\nAté " + shoppingAndServicesSlider.value + " m" : document.querySelector('#shopping-and-services-label').textContent = "\nAté " + Math.round((shoppingAndServicesSlider.value / 1000) * 10) / 10 + " km")
-  } catch (error) { }
-
-  try {
-    const citySelect = new MDCSelect(document.querySelector('#city-select'));
-  } catch (error) { }
-
-  try {
-    const locationSelect = new MDCSelect(document.querySelector('#location-select'));
-  } catch (error) { }
-
-
-  try {
-    const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
-  } catch (error) { }
-
-</script>
-
+  <script>
+    loadElements();
+    changePriceRangeOnClick();
+  </script>
 </html>
